@@ -1,6 +1,7 @@
 ---
 import Comment from "@components/comment/index.astro";
 import FriendCard from "@components/features/friends/FriendCard.astro";
+import FriendsPage from "@components/features/friends/FriendsPage.astro";
 import { PageHeader } from "@components/features/page-header";
 import Markdown from "@components/misc/Markdown.astro";
 import MainGridLayout from "@layouts/MainGridLayout.astro";
@@ -121,6 +122,8 @@ const allTags = Array.from(new Set(friendsList.flatMap((item) => item.tags)));
 					{i18n(I18nKey.friendsNoResults)}
 				</p>
 			</div>
+
+			<FriendsPage />
 
 			<!-- 说明文档 -->
 			<Markdown class="mt-8 prose dark:prose-invert max-w-none">
